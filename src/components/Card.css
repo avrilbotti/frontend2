@@ -1,0 +1,187 @@
+.holographic-card {
+  position: relative;
+  background: rgba(26, 26, 46, 0.7);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 255, 204, 0.2);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.holographic-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 255, 204, 0.2);
+  border-color: var(--accent);
+}
+
+.holographic-effect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: hologram 3s infinite;
+}
+
+@keyframes hologram {
+  0% { opacity: 0; transform: translateX(-100%); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(100%); }
+}
+
+.member-photo-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(0, 255, 204, 0.3);
+}
+
+.member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.holographic-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,255,204,0.1) 0%, transparent 100%);
+}
+
+.member-info {
+  text-align: center;
+}
+
+.member-name {
+  color: var(--accent);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-role {
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.member-bio {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.social-link.github {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-link.github:hover {
+  background: rgba(0,255,204,0.2);
+  border-color: var(--accent);
+}
+
+.social-link.linkedin {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-link.linkedin:hover {
+  background: rgba(0,255,204,0.2);
+  border-color: var(--accent);
+}
+
+.social-link.twitter {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-link.twitter:hover {
+  background: rgba(0,255,204,0.2);
+  border-color: var(--accent);
+}
+
+.social-link.portfolio {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-link.portfolio:hover {
+  background: rgba(0,255,204,0.2);
+  border-color: var(--accent);
+}
+
+.social-link.kaggle {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-link.kaggle:hover {
+  background: rgba(0,255,204,0.2);
+  border-color: var(--accent);
+}
+
+.social-link.dribbble {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social-link.dribbble:hover {
+  background: rgba(0,255,204,0.2);
+  border-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .holographic-card {
+    padding: 1.5rem;
+  }
+  
+  .member-photo-container {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .member-name {
+    font-size: 1.3rem;
+  }
+  
+  .social-links {
+    gap: 0.5rem;
+  }
+  
+  .social-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+  }
+}
